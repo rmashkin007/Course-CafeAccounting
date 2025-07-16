@@ -84,6 +84,17 @@ namespace CafeAccounting.Logic
                 });
         }
 
+        public void Remove(T item)
+        {
+            base.Remove(item);
+
+            if (!_isSearching)
+                OnCollectionChanged?.Invoke(this, new ListChangedEventArgs<T>
+                {
+                    List = this.GetList()
+                });
+        }
+
         public List<T> Search(string query)
         {
             List<T> list = this.GetList();

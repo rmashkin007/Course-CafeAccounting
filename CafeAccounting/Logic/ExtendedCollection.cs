@@ -28,5 +28,10 @@ namespace CafeAccounting.Logic
         {
             return new List<object>(Items);
         }
+
+        protected void Remove(object item)
+        {
+            Items.Remove(item);
+        }
     }
 }

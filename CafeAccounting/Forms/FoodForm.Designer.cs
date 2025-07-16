@@ -1,6 +1,6 @@
 ﻿namespace CafeAccounting.Forms
 {
-    partial class NewFoodForm
+    partial class FoodForm
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,8 @@
             panel4 = new Panel();
             imagePathInput = new TextBox();
             imageSelectButton = new Button();
+            label10 = new Label();
+            imagePreviewBox = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)orderCountInput).BeginInit();
@@ -57,6 +59,7 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)priceInput).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePreviewBox).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -64,30 +67,33 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 130F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(panel3, 1, 5);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 4);
+            tableLayoutPanel1.Controls.Add(panel3, 1, 6);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 5);
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(nameInput, 1, 0);
-            tableLayoutPanel1.Controls.Add(label2, 0, 2);
-            tableLayoutPanel1.Controls.Add(panel1, 1, 2);
-            tableLayoutPanel1.Controls.Add(label4, 0, 3);
-            tableLayoutPanel1.Controls.Add(label5, 0, 4);
-            tableLayoutPanel1.Controls.Add(label6, 0, 5);
-            tableLayoutPanel1.Controls.Add(addButton, 0, 6);
+            tableLayoutPanel1.Controls.Add(label2, 0, 3);
+            tableLayoutPanel1.Controls.Add(panel1, 1, 3);
+            tableLayoutPanel1.Controls.Add(label4, 0, 4);
+            tableLayoutPanel1.Controls.Add(label5, 0, 5);
+            tableLayoutPanel1.Controls.Add(label6, 0, 6);
+            tableLayoutPanel1.Controls.Add(addButton, 0, 7);
             tableLayoutPanel1.Controls.Add(label9, 0, 1);
             tableLayoutPanel1.Controls.Add(panel4, 1, 1);
+            tableLayoutPanel1.Controls.Add(label10, 0, 2);
+            tableLayoutPanel1.Controls.Add(imagePreviewBox, 1, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 7;
+            tableLayoutPanel1.RowCount = 8;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 150F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
-            tableLayoutPanel1.Size = new Size(306, 251);
+            tableLayoutPanel1.Size = new Size(306, 419);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel3
@@ -95,7 +101,7 @@
             panel3.Controls.Add(orderCountInput);
             panel3.Controls.Add(label8);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(133, 163);
+            panel3.Location = new Point(133, 313);
             panel3.Name = "panel3";
             panel3.Size = new Size(170, 26);
             panel3.TabIndex = 8;
@@ -125,7 +131,7 @@
             panel2.Controls.Add(availabilityInput);
             panel2.Controls.Add(label7);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(133, 131);
+            panel2.Location = new Point(133, 281);
             panel2.Name = "panel2";
             panel2.Size = new Size(170, 26);
             panel2.TabIndex = 7;
@@ -172,7 +178,7 @@
             // 
             label2.Anchor = AnchorStyles.Left;
             label2.AutoSize = true;
-            label2.Location = new Point(3, 72);
+            label2.Location = new Point(3, 222);
             label2.Name = "label2";
             label2.Size = new Size(35, 15);
             label2.TabIndex = 2;
@@ -183,7 +189,7 @@
             panel1.Controls.Add(priceInput);
             panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(133, 67);
+            panel1.Location = new Point(133, 217);
             panel1.Name = "panel1";
             panel1.Size = new Size(170, 26);
             panel1.TabIndex = 3;
@@ -194,7 +200,6 @@
             priceInput.Increment = new decimal(new int[] { 1, 0, 0, 65536 });
             priceInput.Location = new Point(0, 0);
             priceInput.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
-            priceInput.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
             priceInput.Name = "priceInput";
             priceInput.Size = new Size(144, 23);
             priceInput.TabIndex = 1;
@@ -214,7 +219,7 @@
             // 
             label4.Anchor = AnchorStyles.Left;
             label4.AutoSize = true;
-            label4.Location = new Point(3, 104);
+            label4.Location = new Point(3, 254);
             label4.Name = "label4";
             label4.Size = new Size(62, 15);
             label4.TabIndex = 4;
@@ -224,7 +229,7 @@
             // 
             label5.Anchor = AnchorStyles.Left;
             label5.AutoSize = true;
-            label5.Location = new Point(3, 136);
+            label5.Location = new Point(3, 286);
             label5.Name = "label5";
             label5.Size = new Size(64, 15);
             label5.TabIndex = 5;
@@ -234,7 +239,7 @@
             // 
             label6.Anchor = AnchorStyles.Left;
             label6.AutoSize = true;
-            label6.Location = new Point(3, 168);
+            label6.Location = new Point(3, 318);
             label6.Name = "label6";
             label6.Size = new Size(121, 15);
             label6.TabIndex = 6;
@@ -244,7 +249,7 @@
             // 
             tableLayoutPanel1.SetColumnSpan(addButton, 2);
             addButton.Dock = DockStyle.Bottom;
-            addButton.Location = new Point(3, 225);
+            addButton.Location = new Point(3, 393);
             addButton.Name = "addButton";
             addButton.Size = new Size(300, 23);
             addButton.TabIndex = 9;
@@ -292,14 +297,34 @@
             imageSelectButton.UseVisualStyleBackColor = true;
             imageSelectButton.Click += imageSelectButton_Click;
             // 
-            // NewFoodForm
+            // label10
+            // 
+            label10.Anchor = AnchorStyles.Left;
+            label10.AutoSize = true;
+            label10.Location = new Point(3, 131);
+            label10.Name = "label10";
+            label10.Size = new Size(79, 15);
+            label10.TabIndex = 12;
+            label10.Text = "Зображення:";
+            // 
+            // imagePreviewBox
+            // 
+            imagePreviewBox.Dock = DockStyle.Fill;
+            imagePreviewBox.Location = new Point(133, 67);
+            imagePreviewBox.Name = "imagePreviewBox";
+            imagePreviewBox.Size = new Size(170, 144);
+            imagePreviewBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            imagePreviewBox.TabIndex = 13;
+            imagePreviewBox.TabStop = false;
+            // 
+            // FoodForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(306, 251);
+            ClientSize = new Size(306, 419);
             Controls.Add(tableLayoutPanel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "NewFoodForm";
+            Name = "FoodForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Створення страви";
             tableLayoutPanel1.ResumeLayout(false);
@@ -312,6 +337,7 @@
             ((System.ComponentModel.ISupportInitialize)priceInput).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)imagePreviewBox).EndInit();
             ResumeLayout(false);
         }
 
@@ -338,5 +364,7 @@
         private Panel panel4;
         private TextBox imagePathInput;
         private Button imageSelectButton;
+        private Label label10;
+        private PictureBox imagePreviewBox;
     }
 }

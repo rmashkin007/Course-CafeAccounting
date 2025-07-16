@@ -89,6 +89,7 @@
             editButton.TabIndex = 1;
             editButton.Text = "Редагувати";
             editButton.UseVisualStyleBackColor = true;
+            editButton.Click += editButton_Click;
             // 
             // removeButton
             // 
@@ -100,6 +101,7 @@
             removeButton.TabIndex = 2;
             removeButton.Text = "Видалити";
             removeButton.UseVisualStyleBackColor = true;
+            removeButton.Click += removeButton_Click;
             // 
             // button4
             // 

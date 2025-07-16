@@ -47,11 +47,35 @@ namespace CafeAccounting.Views
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            NewFoodForm newFoodForm = new NewFoodForm();
+            FoodForm newFoodForm = new FoodForm();
+
             if (newFoodForm.ShowDialog() == DialogResult.OK)
             {
-                _foodDatabase.Add(newFoodForm.FoodResult);
+                _foodDatabase.Add(newFoodForm.Food);
             }
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            FoodForm newFoodForm = new FoodForm(_selectedFood!);
+
+            if (newFoodForm.ShowDialog() == DialogResult.OK)
+            {
+                UpdateFoodList(_foodDatabase.GetList());
+            }
+        }
+
+        private void removeButton_Click(object sender, EventArgs e)
+        {
+            Food selectedItem = _selectedFood!;
+
+            if (_foodDatabase.GetList().Count == 1)
+            {
+                foodList.SelectedItems[0].Selected = false;
+                foodList.SelectedItems.Clear();
+            }
+
+            _foodDatabase.Remove(selectedItem);
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
